@@ -1,0 +1,100 @@
+*
+  box-sizing: border-box
+  margin: 0
+  padding: 0
+main
+  background-color: $darkblue
+  padding-top: 10vh
+  padding-bottom: 10vh
+  @media (min-width: $bp)
+    padding-top: 20vh
+    padding-bottom: 20vh
+  .card
+    background-color: $blue
+    border-radius: $br
+    width: 90%
+    margin: auto
+    max-width: 1100px
+    @media (min-width: $bp)
+      display: flex
+      flex-direction: row-reverse
+      justify-content: space-between
+    .overlay
+      position: relative
+      z-index: 1
+      &::after
+        position: absolute
+        content: ''
+        display: block
+        top: 0
+        left: 0
+        bottom: 0
+        right: 0
+        background-color: $violet
+        mix-blend-mode: multiply
+        border-radius: $br $br 0 0
+        @media (min-width: $bp)
+          border-radius: 0 $br $br 0
+    &--image
+      display: block
+      height: auto
+      max-width: 100%
+      z-index: 1
+      border-radius: $br $br 0 0
+      @media (min-width: $bp)
+        max-width: 550px
+        border-radius: 0 $br $br 0
+    &--copy
+      max-width: 500px
+      text-align: center
+      padding: 1em
+      margin: auto
+      @media (min-width: $bp)
+        text-align: left
+        padding: 2em 4em
+    &--heading
+      padding: 1em 0 1em
+      color: $white
+      font-family: $body-font
+      font-size: $heading1
+      font-weight: 700
+      @media (min-width: $bp)
+        font-size: 35px
+    &--body
+      padding: 0 0 1em
+      color: $white-60
+      font-family: $body-font
+      font-size: $body-size
+      font-weight: 400
+      line-height: 1.5rem
+    &--columns
+      padding: 1em 0 1em
+      @media (min-width: $bp)
+        display: flex
+        justify-content: space-between
+        text-align: left
+    &--column
+      padding: 1em
+      @media (min-width: $bp)
+        padding: 3rem 0 0
+      .h2
+        font-size: $heading2
+        font-family: $body-font
+        display: block
+        color: $white
+        width: 100%
+        font-weight: 700
+      .stat-text
+        display: block
+        padding-top: .5em
+        width: 100%
+        color: $white-60
+        letter-spacing: 1.5px
+        font-size: $small
+        font-family: $body-font
+        font-weight: 400
+
+.colored-text
+  color: $violet
+.text-uppercase
+  text-transform: uppercase
